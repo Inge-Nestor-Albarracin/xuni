@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Twitter Clone</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <svg viewBox="0 0 24 24" class="twitter-logo" style="width: 40px; height: 40px; margin-bottom: 20px;">
+            <g>
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+            </g>
+        </svg>
+        <h2>Crear tu cuenta</h2>
+        <form id="registerForm">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <input type="text" id="username" placeholder="Nombre de usuario" required>
+            <input type="text" id="fullName" placeholder="Nombre completo" required>
+            <button type="submit">Registrarse</button>
+        </form>
+        <button id="goToLogin">¿Ya tienes una cuenta? Inicia sesión</button>
+    </div>
+    <script type="module" src="src/register.js"></script>
+</body>
+</html>
