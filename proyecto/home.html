@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Clone</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar/Navegación -->
+        <nav class="sidebar">
+            <div class="logo">
+                <svg viewBox="0 0 24 24" class="twitter-logo">
+                    <g>
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                    </g>
+                </svg>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item active">
+                    <a href="#">
+                        <svg viewBox="0 0 24 24">
+                            <g><path d="M12 1.696L.622 8.807l1.06 1.696L3 9.679V19.5C3 20.881 4.119 22 5.5 22h13c1.381 0 2.5-1.119 2.5-2.5V9.679l1.318.824 1.06-1.696L12 1.696zM12 16.5c-1.933 0-3.5-1.567-3.5-3.5s1.567-3.5 3.5-3.5 3.5 1.567 3.5 3.5-1.567 3.5-3.5 3.5z"></path></g>
+                        </svg>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <!-- ... resto del sidebar igual al anterior ... -->
+            </ul>
+            
+            <button class="tweet-btn">Twittear</button>
+            
+            <div class="user-profile">
+                <div class="avatar"></div>
+                <div class="user-info">
+                    <strong id="current-username">Usuario</strong>
+                    <span id="current-handle">@usuario</span>
+                </div>
+                <button id="logoutBtn" class="logout-btn">Cerrar Sesión</button>
+            </div>
+        </nav>
+
+        <!-- Contenido Principal -->
+        <main class="main-content">
+            <div class="header">
+                <h1>Inicio</h1>
+            </div>
+            
+            <div class="tweet-composer">
+                <div class="composer-avatar"></div>
+                <form id="tweetForm" class="tweet-form">
+                    <textarea id="tweetContent" placeholder="¿Qué está pasando?" maxlength="280"></textarea>
+                    <div class="composer-actions">
+                        <div class="action-icons">
+                            <!-- iconos -->
+                        </div>
+                        <div class="tweet-controls">
+                            <span id="charCount">0/280</span>
+                            <button type="submit" class="tweet-submit">Twittear</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <div id="tweetsContainer" class="tweets-feed">
+                <!-- Los tweets se cargarán aquí -->
+            </div>
+        </main>
+
+        <!-- Barra Lateral Derecha -->
+        <aside class="right-sidebar">
+            <!-- ... contenido del sidebar derecho ... -->
+        </aside>
+    </div>
+
+    <script type="module" src="src/home.js"></script>
+</body>
+</html>
