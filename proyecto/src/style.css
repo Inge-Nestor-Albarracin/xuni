@@ -542,3 +542,150 @@ body {
     }
 }
 
+/* Página de Login */
+.login-page {
+    display: flex;
+    min-height: 100vh;
+    background-color: #000;
+}
+
+.login-header {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    border-right: 1px solid #2f3336;
+}
+
+.login-header .twitter-logo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 40px;
+}
+
+.login-header h1 {
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #e7e9ea;
+}
+
+.login-header h2 {
+    font-size: 31px;
+    font-weight: 700;
+    color: #e7e9ea;
+}
+
+.auth-forms {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    max-width: 400px;
+}
+
+.auth-section {
+    display: none;
+}
+
+.auth-section.active {
+    display: block;
+}
+
+.auth-section.loading {
+    text-align: center;
+    color: #71767b;
+}
+
+.auth-section h3 {
+    font-size: 31px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #e7e9ea;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.auth-form input {
+    background-color: #000;
+    border: 1px solid #2f3336;
+    border-radius: 4px;
+    padding: 15px;
+    color: #e7e9ea;
+    font-size: 16px;
+    transition: border-color 0.2s;
+}
+
+.auth-form input:focus {
+    outline: none;
+    border-color: #1d9bf0;
+}
+
+.auth-form button {
+    background-color: #1d9bf0;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.auth-form button:hover {
+    background-color: #1a8cd8;
+}
+
+.auth-form button:disabled {
+    background-color: #0f4e78;
+    cursor: not-allowed;
+}
+
+.auth-section p {
+    color: #71767b;
+    text-align: center;
+}
+
+.auth-section a {
+    color: #1d9bf0;
+    text-decoration: none;
+}
+
+.auth-section a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-page {
+        flex-direction: column;
+    }
+    
+    .login-header {
+        padding: 20px;
+        border-right: none;
+        border-bottom: 1px solid #2f3336;
+    }
+    
+    .login-header h1 {
+        font-size: 40px;
+    }
+    
+    .login-header h2 {
+        font-size: 24px;
+    }
+    
+    .auth-forms {
+        padding: 20px;
+        max-width: none;
+    }
+}
